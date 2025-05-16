@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Game Ular Tangga Edukasi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Game Ular Tangga Edukasi</h1>
+
+  <div id="game-container">
+    <div id="board"></div>
+
+    <div id="info-panel">
+      <div id="dice-result">Klik Lempar Dadu</div>
+      <button id="roll-btn">Lempar Dadu</button>
+
+      <div id="players-info">
+        <div><span class="pion red"></span> Pemain 1 (Merah): <span id="pos-p1">0</span></div>
+        <div><span class="pion yellow"></span> Pemain 2 (Kuning): <span id="pos-p2">0</span></div>
+      </div>
+
+      <div id="question-container" class="hidden">
+        <h3 id="question-text"></h3>
+        <div id="answers"></div>
+      </div>
+
+      <div id="message"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
