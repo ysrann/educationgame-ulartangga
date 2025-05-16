@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #9be7ff, #e0f7fa);
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  user-select: none;
+}
+
+h1 {
+  color: #00796b;
+  margin-bottom: 20px;
+}
+
+#game-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 900px;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(10, 40px);
+  grid-template-rows: repeat(10, 40px);
+  border: 3px solid #004d40;
+  background-color: #a7ffeb;
+  position: relative;
+}
+
+.cell {
+  border: 1px solid #004d40;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+  font-weight: bold;
+  color: #004d40;
+  position: relative;
+}
+
+.cell:nth-child(odd) {
+  background-color: #b2dfdb;
+}
+
+/* Pion */
+.pion {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  transition: all 0.5s ease;
+  border: 2px solid #333;
+  pointer-events: none;
+  z-index: 10;
+}
+.pion.red {
+  background-color: #d32f2f;
+}
+.pion.yellow {
+  background-color: #fbc02d;
+}
+
+/* Info panel */
+#info-panel {
+  width: 320px;
+  background: #ffffffcc;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 0 15px rgba(0, 77, 64, 0.3);
+}
+
+#dice-result {
+  font-size: 28px;
+  font-weight: 700;
+  color: #00796b;
+  margin-bottom: 15px;
+  text-align: center;
+  padding: 10px;
+  background: #b2dfdb;
+  border-radius: 8px;
+  user-select: none;
+}
+
+#roll-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  background: #004d40;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: background 0.3s ease;
+}
+#roll-btn:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+#roll-btn:hover:not(:disabled) {
+  background: #00796b;
+}
+
+#players-info div {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.pion.red, .pion.yellow {
+  display: inline-block;
+  position: static;
+  width: 14px;
+  height: 14px;
+  border: none;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+/* Question container */
+#question-container {
+  margin-top: 15px;
+}
+
+#question-text {
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #004d40;
+}
+
+#answers button {
+  display: block;
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #00796b;
+  background: #b2dfdb;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+#answers button:hover {
+  background: #00796b;
+  color: white;
+}
+
+#message {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #d32f2f;
+  min-height: 20px;
+}
